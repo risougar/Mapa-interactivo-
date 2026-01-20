@@ -20,13 +20,13 @@ No se trata únicamente de una política ambiental, sino de una estrategia integ
 
 Cada Convenio de Transición Justa delimita un ámbito territorial concreto, compuesto por municipios que:
 
-Han dependido directa o indirectamente de actividades como la minería del carbón o la generación eléctrica térmica.
+* Han dependido directa o indirectamente de actividades como la minería del carbón o la generación eléctrica térmica.
 
-Presentan una elevada exposición al impacto laboral y económico del cierre de estas instalaciones.
+* Presentan una elevada exposición al impacto laboral y económico del cierre de estas instalaciones.
 
-Requieren medidas específicas de acompañamiento para reconvertir su estructura productiva.
+* Requieren medidas específicas de acompañamiento para reconvertir su estructura productiva.
 
-La selección de municipios no es arbitraria: responde a criterios técnicos, socioeconómicos y territoriales, definidos por el Ministerio para la Transición Ecológica y el Reto Demográfico (MITECO).
+La selección de municipios no es arbitraria responde a criterios técnicos, socioeconómicos y territoriales, definidos por el Ministerio para la Transición Ecológica y el Reto Demográfico (MITECO).
 
 
 
