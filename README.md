@@ -4,7 +4,7 @@
 
 Este repositorio presenta un mapa interactivo que permite visualizar de forma geográfica los municipios incluidos en los distintos Convenios de Transición Justa en España.
 
-### Objetivo del proyecto
+## Objetivo del proyecto
 
 Facilitar la comprensión territorial de los CTJ.
 
