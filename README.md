@@ -14,7 +14,7 @@ Los Convenios de Transición Justa (CTJ) son instrumentos de política pública 
 
 Su objetivo central es garantizar que la transición hacia un modelo económico descarbonizado sea socialmente equitativa, evitando que determinados territorios y colectivos queden rezagados como consecuencia del cambio de modelo productivo.
 
-No se trata únicamente de una política ambiental, sino de una estrategia integral de desarrollo territorial, con impacto económico, social y laboral.
+Además de una política ambiental, es una estrategia de desarrollo territorial, con impacto económico, social y laboral.
 
 ## ¿Qué municipios están incluidos?
 
