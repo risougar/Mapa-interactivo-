@@ -1,5 +1,13 @@
 # Mapa interactivo de los municipios que forman parte de los Convenios de Transición Justa
 
+## Sobre este proyecto
+
+Este repositorio presenta un mapa interactivo que permite visualizar de forma geográfica los municipios incluidos en los distintos Convenios de Transición Justa en España.
+
+### Objetivo del proyecto
+
+Facilitar la comprensión territorial de los CTJ.
+
 ## ¿Qué son los Convenios de Transición Justa?
 
 Los Convenios de Transición Justa (CTJ) son instrumentos de política pública impulsados por el Gobierno de España para acompañar a los territorios más afectados por el cierre de actividades intensivas en carbono, principalmente centrales térmicas de carbón, explotaciones mineras y otras industrias altamente contaminantes.
@@ -20,12 +28,6 @@ Requieren medidas específicas de acompañamiento para reconvertir su estructura
 
 La selección de municipios no es arbitraria: responde a criterios técnicos, socioeconómicos y territoriales, definidos por el Ministerio para la Transición Ecológica y el Reto Demográfico (MITECO).
 
-## Sobre este proyecto
 
-Este repositorio presenta un mapa interactivo que permite visualizar de forma geográfica los municipios incluidos en los distintos Convenios de Transición Justa en España.
-
-### El objetivo del proyecto es:
-
-Facilitar la comprensión territorial de los CTJ.
 
 
