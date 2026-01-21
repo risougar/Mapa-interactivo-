@@ -4,15 +4,15 @@
 
 ## Sobre este proyecto
 
-Este repositorio presenta un mapa interactivo que permite visualizar de forma geográfica los municipios incluidos en las distintos Zonas de Transición Justa en España.
+Este repositorio presenta un mapa interactivo que permite visualizar de forma geográfica los municipios incluidos en las distintas Zonas de Transición Justa en España.
 
 ## Objetivo del proyecto
 
 Facilitar la comprensión territorial de los ZTJ.
 
-## ¿Qué son las zonas de Transición Justa?
+## ¿Qué son las Zonas de Transición Justa?
 
-Las Zonas de Transición Justa (CTJ) son instrumentos de política pública impulsados por el Gobierno de España para acompañar a los territorios más afectados por el cierre de actividades intensivas en carbono, principalmente centrales térmicas de carbón, explotaciones mineras y otras industrias altamente contaminantes.
+Las Zonas de Transición Justa (ZTJ) son instrumentos de política pública impulsados por el Gobierno de España para acompañar a los territorios más afectados por el cierre de actividades intensivas en carbono, principalmente centrales térmicas de carbón, explotaciones mineras y otras industrias altamente contaminantes.
 
 Su objetivo central es garantizar que la transición hacia un modelo económico descarbonizado sea socialmente equitativa, evitando que determinados territorios y colectivos queden rezagados como consecuencia del cambio de modelo productivo.
 
