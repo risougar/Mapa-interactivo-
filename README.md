@@ -8,7 +8,7 @@ Este repositorio presenta un mapa interactivo que permite visualizar de forma ge
 
 ## Objetivo del proyecto
 
-Facilitar la comprensión territorial de los ZTJ.
+Facilitar la comprensión territorial de las ZTJ.
 
 ## ¿Qué son las Zonas de Transición Justa?
 
