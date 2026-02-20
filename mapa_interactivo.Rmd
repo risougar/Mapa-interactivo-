@@ -1,0 +1,134 @@
+---
+title: "Mapa Interactivo"
+author: "Ricardo Souto"
+date: "2026-02-19"
+output: html_document
+---
+
+## Carga de las librerías a utilizar.
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(leaflet)
+library(sf) #Para leer el archivo del perimmetro de los municipios
+library(tidygeocoder)
+library(shiny)
+library(ggplot2)
+#library(rsconnetc)
+```
+
+## Leer los datos guardados en CSV (ya procesados).
+
+```{r}
+localizacion <- read_csv("localizacion.csv")
+```
+
+## Definir UI (Interfaz) utilizando un CSS para hacer que el mapa ocupe toda la pantalla y un menú desplegable para filtrar por Comunidad, provincia y municipio.
+
+```{r}
+ui <- fluidPage(
+
+  tags$style(
+    HTML("
+      #mapa {
+        height: 80vh !important; /* 80% de la altura de la pantalla */
+        width: 100% !important;
+      }
+    ")
+   ),
+  
+  
+  titlePanel("Mapa de Municipios TJ"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      
+      selectInput("comunidad", "Filtrar por Comunidad Autónoma:",
+                  choices = c("Todas", unique(localizacion$Comunidades)),
+                  selected = "Todas"),
+      
+      selectInput("provincia", "Filtrar por provincia:",
+                  choices = c("Todas", unique(localizacion$Provincias)),
+                  selected = "Todas"),
+      
+      selectInput("municipio", "Filtrar por municipio:",   
+                  choices = c("Todos", unique(localizacion$Municipios)),   
+                  selected = "Todos"),
+    ),  
+    
+    mainPanel(  
+      
+      
+      
+      leafletOutput("mapa"),  # Mapa interactivo  
+      plotOutput("grafico")   # Grafico
+    )
+  )
+)
+
+```
+
+## Definir Server (Lógica de la app) filtrando datos según la selección del usuario y renderizar el mapa en la aplicación
+
+```{r}
+server <- function(input, output, session) {
+
+  datos_filtrados <- reactive({
+    
+      datos <- localizacion  # Hacemos una copia para trabajar sobre ella
+      
+      if (input$comunidad != "Todas") {
+        datos <- datos[datos$Comunidades == input$comunidad, , drop = FALSE]
+      }
+      
+      if (input$provincia != "Todas") {
+        datos <- datos[datos$Provincias == input$provincia, , drop = FALSE]
+      }
+      
+      if (input$municipio != "Todos") {
+        datos <- datos[datos$Municipios == input$municipio, , drop = FALSE]
+      }
+      
+      return(datos)  # Se devuelve el dataset filtrado sin modificar el original
+    })
+
+  output$mapa <- renderLeaflet({
+    
+    req(datos_filtrados())  # Asegura que datos_filtrados no sea NULL
+    
+    leaflet(datos_filtrados()) %>%
+      addTiles() %>%  # Mapa base
+      addCircleMarkers(
+        ~long, ~lat,  # Coordenadas
+        popup = ~paste0(  # Información en el popup
+          "<b>Comunidad:</b> ", Comunidades, "<br>",
+          "<b>Provincia:</b> ", Provincias, "<br>",
+          "<b>Municipio:</b> ", Municipios, "<br>",
+          "<b>Zona TJ:</b> ", `Zona TJ`
+        ),
+        color = "darkgreen",  # Color de los puntos
+        radius = 8  # Tamaño de los puntos
+      )
+  })
+  
+  output$grafico <- renderPlot({
+    
+    req(datos_filtrados())
+    
+    ggplot(datos_filtrados(), aes(x = Provincias)) +
+      geom_bar(fill = "blue") +
+      theme_minimal() +
+      labs(title = "Cantidad de municipios por provincia", 
+           x = "Provincias", y = "Número de municipios") +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Inclinar etiquetas
+  })
+  
+}
+```
+
+## Ejecutar la aplicación Shiny
+
+```{r}
+shinyApp(ui, server)
+```
