@@ -1,7 +1,6 @@
 # Mapa interactivo de los municipios que forman parte de las Zonas de Transición Justa
 
 ## **Mapa interactivo:** https://6o1ix4-ricardo-souto.shinyapps.io/Mapa_TJ/
-## **Informe completo:** https://risougar.github.io/Mapa-interactivo-/
 
 ## Sobre este proyecto
 
